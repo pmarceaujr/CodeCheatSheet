@@ -3,24 +3,24 @@ const { Snippets } = require('../models');
 
 const snippetData = [
     {
-        comment_text: "Wicked cool post on HTML tags!  I love it looking forward to more!!",
+        snippet_text: "Wicked cool post on HTML tags!  I love it looking forward to more!!",
         user_id: 1,
-        post_id: 1,
+        topic_id: 1,
     },
     {
-        comment_text: "Totally cool post on CSS stuff!  I love it looking forward to more!!",
+        snippet_text: "Totally cool post on CSS stuff!  I love it looking forward to more!!",
         user_id: 1,
-        post_id: 4,
+        topic_id: 1,
     },
     {
-        comment_text: "Amazing post on NODE!  I love it looking forward to more!!",
+        snippet_text: "Amazing post on NODE!  I love it looking forward to more!!",
         user_id: 1,
-        post_id: 7,
+        topic_id: 1,
     },
     {
-        comment_text: "AWESOMELY cool post on REACT!  I love it looking forward to more!!",
+        snippet_text: "AWESOMELY cool post on REACT!  I love it looking forward to more!!",
         user_id: 1,
-        post_id: 10,
+        topic_id: 1,
     },
 
 ];
