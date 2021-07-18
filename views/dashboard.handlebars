@@ -1,0 +1,28 @@
+
+<div class="container-fluid main_body">
+  <div class="">
+    <div class= "container">
+      <h1>Some of your Favorite and most used code snippet.</h1>
+
+     <hr>
+
+
+  {{#if topics.length}}
+        <h3>Here is a listing of all your posts:</h3>
+    <a class="btn btn-primary mb-3" href="/api/topics/newTopic"> Add Post</button></a>
+    {{#each topics as |topic| }}
+      <div class="card border-secondary shadow  rounded mb-3" >
+        <div class="card-header border-secondary bg-secondary text-white d-flex justify-content-between">Category: {{topic.category}} <span class="badge  btn btn-danger text-white"><a class="text-white" href="/api/topics/delete/{{topic.id}}">X</a></span></div>
+        <div class="card-body text-secondary">
+          <h5 class="card-title">Subject: {{topic.subject}} - <a href="/api/topics/editTopics/{{topic.id}}">Edit Post</a>  </h5>
+          <pre class="card-text">{{topic.body}}</pre>
+           <p class="card-text"><small class="text-muted">-Created By: <span class="badge  bg-warning text-dark"> YOU </span> on  {{topic.createdAt}} </small></p>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+<h2>You currently do not have any posts.</h2>
+<a class="btn btn-primary mb-3" href="/api/topics/newTopic"> Add Post</button></a>
+  {{/if}}
+</div>
+    

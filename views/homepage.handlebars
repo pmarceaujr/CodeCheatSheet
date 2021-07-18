@@ -1,0 +1,39 @@
+<div class="container-fluid main_body">
+  <div class="">
+    <div class= "container">
+      <h1>Some of my Favorite and most used code snippets</h1>
+      <hr>
+      {{#if loggedIN}}      
+      {{else}}
+        <h5>Have an account?  <a href="/login">Login</a> Need an account?<a href="/signup">Sign Up</a>  </h5>
+        <br>
+        <hr>
+      {{/if}}
+
+      {{#if loggedIN}}
+        {{#each topics as |topic| }}
+          <div class="card border-secondary shadow  rounded mb-3" >
+            <div class="card-header border-secondary bg-secondary text-white ">Category: {{topic.category}} </span></div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Subject: <a href="/api/topics/topics/{{topic.id}}">{{topic.subject}}</a> </h5>
+              <pre class="card-text">{{topic.body}}</pre>
+              <p class="card-text"><small class="text-muted">-Created By: <span class="badge  bg-warning text-dark">{{user.username}}</span> on  {{topic.createdAt}} Total comments: <span class="badge  bg-warning text-dark">{{snippets.length}}</span></small></p>
+            </div>
+          </div>
+        {{/each}}
+      {{else}}
+        {{#each topics as |topic| }}
+          <div class="card border-secondary shadow  rounded mb-3" >
+            <div class="card-header border-secondary bg-secondary text-white">Category: {{topic.category}}</div>
+            <div class="card-body text-secondary">
+              <h5 class="card-title">Subject: {{topic.subject}}</h5>
+              <pre class="card-text">{{topic.body}}</pre>
+              <p class="card-text"><small class="text-muted">-Created on:  {{topic.createdAt}} </small></p>
+            </div>
+          </div>
+        {{/each}}
+      {{/if}}
+    </div>
+  </div>    
+</div>
+    

@@ -1,0 +1,39 @@
+    <div class="container-fluid main_body">   
+        <div class=" ">
+            <div class= "container">
+                <h4>Add A New Post</h4>
+                <form class='d-flex flex-column  justify-content-end' method="POST" action="/api/topics/newTopic">
+                    <div class="form-group ">
+                        <label for="">Post Category:</label>
+                        <span id="errorMsg2"></span>
+                        <select class="form-control" name="category" id="category" style="margin-bottom:20px;">
+                            {{#each lookups as |lookup| }}
+                                <option value="{{lookup.value}}">{{lookup.label}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">Post Subject:</label>
+                        <span id="errorMsg2"></span>
+                        <input id="subject" class="form-control" value='{{editTopic.subject}}' name="subject" type="text" style="margin-bottom:20px;">
+                    </div>
+                    <div class="form-group texteditor-container">
+                        <label for="">Post Text:</label>
+                        <span id="errorMsg2"></span>
+                        <textarea id="topicbody" class="form-control "  name="topicbody"  rows="10" cols="50" style="margin-bottom:20px;">{{editTopic.body}}</textarea> 
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="addPost" value="Add Post" class="form-control btn btn-primary" name="addPost" style="">
+                    </div>
+                </form>
+            </div>    
+        </div>
+    </div>
+
+    <br>
+                    <!--<script>
+                        CKEDITOR.replace( 'postbody' );
+                </script>-->
+
+
+   

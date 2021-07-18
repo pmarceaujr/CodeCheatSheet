@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default navbar-fixed-top" >
+  <div class="flex-row  d-flex justify-content-between" id="nav1">
+    {{#if loggedIN}}
+      <div>
+          <a href="/logout">Logout</a>
+      </div>
+    {{else}}
+      <div>
+        <a href="/login">Login</a>
+      </div>
+    {{/if}}
+    {{#if loggedIN}}
+      <div>
+        <a href="/api/topics/topics">Dashboard</a>
+      </div>
+    {{else}}
+      <div>
+        <a href="/login">Dashboard</a>
+      </div>    
+    {{/if}}
+      <div>
+        <a href="/">Home</a>
+      </div>
+  </div>
+</nav>
+<nav class="navbar navbar-default navbar-fixed-top  " >
+
+    <div class="flex-row d-flex justify-content-between" id="nav2"  > 
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=VS-Code">VSCode</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=HTML">HTML</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=CSS">CSS</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=JavaScript">JS</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=jQuery">jQuery</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=SQL">SQL</a>                  
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=NODE">NODE</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=REACT">REACT</a>
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=iReport">iReport</a> 
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=Python">Python</a> 
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=PHP">PHP</a> 
+      <a class="navLinks nav5 btn btn1 btn-outline-success" href="/find?category=GIT">GIT</a>      
+    </div>
+
+</nav>
+
+
+
+
+
+
+

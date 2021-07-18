@@ -1,0 +1,20 @@
+    <div class="container-fluid main_body">
+        <div class="">
+            <div class= "container">
+                <a class="btn btn-primary mb-3" href="/newSnippet"> Add Comment</button></a>
+                <div class="card border-secondary shadow  rounded mb-3 " >
+                <div class="card-header border-secondary bg-secondary text-white">Category: {{topics.category}}</div>
+                <div class="card-body text-secondary">
+	                <h5 class="card-title">Subject: {{topics.subject}} </h5>
+                    <pre class="card-text">{{topics.body}}</pre>
+                    <p class="card-text"><small class="text-muted">-Created By: <span class="badge  bg-warning text-dark">{{topics.user.username}}</span> on  {{topics.createdAt}}  Total comments: <span class="badge rounded-pill bg-warning text-dark">{{topics.snippets.length}}</span></small></p>
+                </div>
+            </div>
+
+                {{#each topics.snippets as |snippet| }}
+                {{>postComments}}
+                {{/each}}
+
+        </div>
+    </div>
+
